@@ -1,0 +1,109 @@
+body{
+  background-color: #041f26;
+}
+
+.card,
+.carousel,
+.jumbotron{
+  border-radius: 5px;
+}
+.form-control,
+.btn{
+  border-radius: 3px;
+}
+
+.card,
+.carousel {
+  margin-bottom: 30px;
+}
+.jumbotron {
+    padding: 4rem 4rem;
+    background-color: #073642;
+    color:#839496;
+    margin: 30px 0;
+}
+#loadTweetsLeft h5,
+#loadTweetsRight h5{
+  text-align: center;
+  margin: 10px 0 20px 0;
+}
+.loadLeft,
+.loadRight{
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+footer{
+  background-color: #073642;
+  color:#839496;
+  text-align: center;
+  padding: 30px 0;
+}
+#intCurtain{
+  display:none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 999; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(4,31,38); /* Fallback color */
+  background-color: rgba(4,31,38,0.9); /* Black w/ opacity */
+}
+.loader {
+    border: 16px solid #f7f7f7; /* Light grey */
+    border-top: 16px solid #0079a1; /* Dark Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 1.25s linear infinite;
+    margin:150px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+/* Curate Tweets */
+#cortTweets,
+#blartTweets,
+#newCaliTweets,
+#muellerTweets,
+#superBowlTweets,
+#netNeutTweets{
+  display: none;
+}
+
+#form-header,
+#search-term,
+#run-search{
+  float:left;
+}
+
+#form-header{
+
+}
+#search-term{
+  clear: left;
+  width: 90%;
+  margin: 0 20px 20px 0;
+}
+#run-search{
+
+}
+
+.userTweet{
+  background-color:#FFF;
+  width:100%;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 0 auto 20px auto;
+}
+.userImage{
+
+}
+.tweet{
+
+}
