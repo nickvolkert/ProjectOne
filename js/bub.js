@@ -76,7 +76,7 @@ $("#run-search").on("click", function(event) {
 });
 
 var searchTerm = "";
-var queryURLBase = "http://207.229.138.9:3000/tweets/";
+var queryURLBase = "https://dc.ksi.edu/tweets/";
 
 function runQuery(queryURL) {
   //Clears past search
@@ -139,12 +139,12 @@ function runQuery(queryURL) {
 }
 
 $(".linkCurated").on("click", function() {
-  searchTerm = ($(this).text()).substr(1);
-  var searchURL = queryURLBase + searchTerm;
-  var tweets = runQuery(searchURL);
-  console.log(tweets);
-  //Comment or Uncomment this for the loading overlay - Nick
-  myLocationCurtain();
-  //pushes search term to header of block below input - Nick
-  $("#tweetSubjectHeader").text(searchTerm);
+    searchTerm = ($(this).text()).substr(1);
+    var searchURL = queryURLBase + searchTerm;
+    var tweets = runQuery(searchURL);
+    console.log(tweets);
+    //Comment or Uncomment this for the loading overlay - Nick
+    myLocationCurtain();
+    //pushes search term to header of block below input - Nick
+    $("#tweetSubjectHeader").text(searchTerm);
 });
