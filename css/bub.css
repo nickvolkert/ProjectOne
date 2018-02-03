@@ -22,23 +22,110 @@ body{
     color:#839496;
     margin: 30px 0;
 }
+h1{
+  background: url(../img/Peerce.png) center -23px no-repeat;
+  padding: 70px;
+}
+h1 span{
+  display: none;
+}
+#introduction h2{
+  color:#073642;
+  padding:40px 0;
+}
 #loadTweetsLeft h5,
 #loadTweetsRight h5{
   text-align: center;
   margin: 10px 0 20px 0;
 }
-.loadLeft,
-.loadRight{
+#tweetsLeft,
+#tweetsRight{
   background-color: #f7f7f7;
   padding: 20px;
   border-radius: 5px;
   margin-bottom: 20px;
+  display: none;
 }
+#tweetsLeft .indicoPercent{background-color:green;}
+#tweetsRight .indicoPercent{background-color:red;}
+
+.indicoPercent{
+  font-weight: bold;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 3px;
+  display: inline-block;
+  margin: 0 0 2px 0;
+}
+/*Tweet cards*/
+.userTweet{
+  background-color:#FFF;
+  width:90%;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 0 auto 20px auto;
+  -moz-box-shadow: 0 0 5px #888;
+  -webkit-box-shadow: 0 0 5px#888;
+  box-shadow: 0 0 5px #888;
+}
+.userImage{
+  float:left;
+  padding-right: 10px;
+}
+.tweetAuthor{
+  font-size:18px;
+  font-weight: bold;
+  float: left;
+}
+.tweetTextWrapper{
+  clear: left;
+  padding:20px 0 0 0;
+}
+.tweetText{
+  font-size: 20px;
+}
+
+/* Curate Tweets */
+#cortTweets,
+#blartTweets,
+#newCaliTweets,
+#muellerTweets,
+#superBowlTweets,
+#netNeutTweets{
+  display: none;
+}
+
+#form-header,
+#search-term,
+#run-search{
+  float:left;
+}
+#search-term{
+  clear: left;
+  width: 90%;
+  margin: 0 20px 20px 0;
+}
+
+.error{
+  border-color:red;
+}
+#errorHandling{
+  color:red;
+  font-size: 10px;
+  display:none;
+  float:left;
+}
+
+#recentSearch{
+  display:none;
+}
+
 footer{
   background-color: #073642;
   color:#839496;
   text-align: center;
   padding: 30px 0;
+  margin-top:80px;
 }
 #intCurtain{
   display:none; /* Hidden by default */
@@ -65,54 +152,4 @@ footer{
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
-}
-/* Curate Tweets */
-#cortTweets,
-#blartTweets,
-#newCaliTweets,
-#muellerTweets,
-#superBowlTweets,
-#netNeutTweets{
-  display: none;
-}
-
-#form-header,
-#search-term,
-#run-search{
-  float:left;
-}
-
-#form-header{
-
-}
-#search-term{
-  clear: left;
-  width: 90%;
-  margin: 0 20px 20px 0;
-}
-#run-search{
-
-}
-
-.userTweet{
-  background-color:#FFF;
-  width:100%;
-  padding: 10px;
-  border-radius: 5px;
-  margin: 0 auto 20px auto;
-}
-.userImage{
-
-}
-.tweet{
-
-}
-
-.error{
-  border-color:red;
-}
-#errorHandling{
-  color:red;
-  font-size: 10px;
-  display:none;
 }
