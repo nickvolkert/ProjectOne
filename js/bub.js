@@ -1,5 +1,7 @@
 /* global moment firebase */
-
+$(document).ready(function () {
+    $("#search-term").val('');
+});
 // Initialize Firebase
 var config = {
   apiKey: "AIzaSyAEaLLLymyOsvTY7Sj6diL8mCFof9bGQXo",
@@ -46,21 +48,32 @@ $("#run-search").on("click", function(event) {
   event.preventDefault();
 
   searchTerm = $("#search-term").val().trim();
-  var searchURL = queryURLBase + searchTerm;
-  var tweets = runQuery(searchURL);
-  console.log(tweets);
-  //Comment or Uncomment this for the loading overlay - Nick
-  myLocationCurtain();
-  //pushes search term to header of block below input - Nick
-
-  $("#tweetSubjectHeader").text(searchTerm);
-  $("#carouselId").hide();
+  if ($('input:text').val().length == 0) {
+    $("#search-term").addClass("error");
+    $("#errorHandling").show();
+ } else {
+   var searchURL = queryURLBase + searchTerm;
+   var tweets = runQuery(searchURL);
+   console.log(tweets);
+   $("#search-term").removeClass("error");
+   $("#errorHandling").hide();
+   //Comment or Uncomment this for the loading overlay - Nick
+   myLocationCurtain();
+   //pushes search term to header of block below input - Nick
+   $("#tweetSubjectHeader").text(searchTerm);
+   $("#carouselId").hide();
+ }
 });
 
 var searchTerm = "";
 var queryURLBase = "http://207.229.138.9:3000/tweets/";
 
 function runQuery(queryURL) {
+  //Clears past search
+  $("#loadTweetsLeft").empty();
+  $("#loadTweetsRight").empty();
+  $("#loadTweetsLeft").html("<h5>Tweets FOR this subject</h5>");
+  $("#loadTweetsRight").html("<h5>Tweets AGAINST this subject</h5>");
   // The AJAX function uses the queryURL and GETS the JSON data associated with it.
   // The data then gets stored in the variable called: "tweetData"
   $.ajax({
@@ -117,3 +130,14 @@ function runQuery(queryURL) {
     }
   });
 }
+
+$(".linkCurated").on("click", function() {
+ searchTerm = ($(this).text()).substr(1);
+ var searchURL = queryURLBase + searchTerm;
+ var tweets = runQuery(searchURL);
+ console.log(tweets);
+ //Comment or Uncomment this for the loading overlay - Nick
+ myLocationCurtain();
+ //pushes search term to header of block below input - Nick
+ $("#tweetSubjectHeader").text(searchTerm);
+});

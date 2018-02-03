@@ -48,36 +48,15 @@
         <h5 class="card-header">Featured</h5>
         <div class="card-body">
           <div class="panel-body">
-
-            <!-- <form>
-              <div class="form-group">
-                <input type="text" class="form-control" id="tweetSubject" placeholder="Find a Challenging Subject">
-              </div>
-              <button type="submit" class="btn btn-primary" id="submitTweetSubject">Submit</button>
-            </form> -->
-
             <form role="form">
-                	<label for="search">Search Term:</label>
-                	<input type="text" class="form-control" id="search-term" placeholder="Find a Challenging Subject">
-        			    <button type="submit" class="btn btn-primary" id="run-search"><i class="fa fa-search"></i> Search</button>
+              <label for="search">Search Term:</label>
+              <input type="text" class="form-control" id="search-term" placeholder="Find a Challenging Subject">
+              <div id="errorHandling">Please Enter a search term</div>
+        		  <button type="submit" class="btn btn-primary" id="run-search"><i class="fa fa-search"></i> Search</button>
         		</form>
           </div>
         </div>
       </div>
-
-      <!--Trying out Google Charts-->
-      <!-- <div class="card" id="googleChartDiv">
-        <h5 class="card-header">Data about this subject:<span id="googleChartHeader">subject</span></h5>
-        <div class="card-body">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm" id="googleChart">
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> -->
 
       <!--Twitter API content goes in these buckets-->
       <div class="card" id="loadTwitter">
@@ -103,18 +82,17 @@
           <div class="container">
             <div class="row">
               <div class="col-sm">
-                <p><a href="javascript:;">#netneutrality</a></p>
-                <p><a href="javascript:;">#superbowl</a></p>
-
-              </div>
-              <div class="col-sm">
-                <p><a href="javascript:;">#muellerinvestigation</a></p>
-                <p><a href="javascript:;">#newcalifornia</a></p>
-              </div>
-              <div class="col-sm">
-                <p><a href="javascript:;">#paulblart</a></p>
-                <p><a href="javascript:;">#cordandtish</a></p>
-              </div>
+               <p><a href="javascript:;" class="linkCurated">#netneutrality</a></p>
+               <p><a href="javascript:;" class="linkCurated">#superbowl</a></p>
+             </div>
+             <div class="col-sm">
+               <p><a href="javascript:;" class="linkCurated">#muellerinvestigation</a></p>
+               <p><a href="javascript:;" class="linkCurated">#newcalifornia</a></p>
+             </div>
+             <div class="col-sm">
+               <p><a href="javascript:;" class="linkCurated">#paulblart</a></p>
+               <p><a href="javascript:;" class="linkCurated">#cordandtish</a></p>
+             </div>
             </div>
           </div>
         </div>
@@ -135,7 +113,5 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
     <script type="text/javascript" src="js/bub.js"></script>
-    <!-- <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> -->
-    <!-- <script type="text/javascript" src="js/chart.js"></script> -->
   </body>
 </html>
