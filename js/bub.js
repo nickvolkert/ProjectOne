@@ -139,12 +139,17 @@ function runQuery(queryURL) {
 }
 
 $(".linkCurated").on("click", function() {
-    searchTerm = ($(this).text()).substr(1);
-    var searchURL = queryURLBase + searchTerm;
-    var tweets = runQuery(searchURL);
-    console.log(tweets);
-    //Comment or Uncomment this for the loading overlay - Nick
-    myLocationCurtain();
-    //pushes search term to header of block below input - Nick
-    $("#tweetSubjectHeader").text(searchTerm);
+  searchTerm = ($(this).text()).substr(1);
+  var searchURL = queryURLBase + searchTerm;
+  var tweets = runQuery(searchURL);
+  console.log(tweets);
+  //Comment or Uncomment this for the loading overlay - Nick
+  myLocationCurtain();
+  //pushes search term to header of block below input - Nick
+  $("#tweetSubjectHeader").text(searchTerm);
+  $("#tweetSubjectHeader").show();
+  $("#tweetsLeft").show();
+  $("#tweetsRight").show();
+  $("#recentSearch").show();
+  $("#introduction").hide();
 });
