@@ -33,6 +33,9 @@ h1 span{
   color:#073642;
   padding:40px 0;
 }
+#tweetSubjectHeader{
+  display: none;
+}
 #loadTweetsLeft h5,
 #loadTweetsRight h5{
   text-align: center;

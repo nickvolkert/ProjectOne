@@ -67,6 +67,7 @@ $("#run-search").on("click", function(event) {
    var searchTermsDiv = $("#recentSearch .card-body .container .row .col-sm");
    var searchTextP = $("<p><a class='linkCurated' href='javascript:;' class='linkCurated'>" + "#" + searchTerm + "</a></p>");
    searchTermsDiv.append(searchTextP);
+   $("#tweetSubjectHeader").show();
    $("#tweetsLeft").show();
    $("#tweetsRight").show();
    $("#recentSearch").show();
